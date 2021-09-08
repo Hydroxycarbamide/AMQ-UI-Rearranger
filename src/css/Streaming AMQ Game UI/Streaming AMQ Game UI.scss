@@ -1,0 +1,51 @@
+// ANIME QUIZ CONTAINER
+
+@use "Components/anime.scss" as *;
+
+// SCOREBOARD
+
+@use "Components/correctplayerlist.scss" as *;
+
+// CORRECT PLAYER LIST
+
+@use "Components/scoreboard.scss" as *;
+
+// ANIME NAME CONTAINER
+
+@use "Components/animename.scss" as *;
+
+// SONG INFO
+
+@use "Components/songinfo.scss" as *;
+
+// VIDEO PLAYER
+
+@use "Components/videoplayer.scss" as *;
+
+// CHAT
+
+@use "Components/chat.scss" as *;
+
+// AVATARS
+
+@use "Components/avatars.scss" as *;
+
+// SONG SELECTOR
+
+@use "Components/songselector.scss" as *;
+
+// VOLUME SETTINGS
+
+@use "Components/volume.scss" as *;
+
+// MENU
+
+@use "Components/menu.scss" as *;
+
+// SONG COUNTER CONTAINER (*)
+
+@use "Components/songcounter.scss" as *;
+
+// ANIME NAME COUNTER CONTAINER
+
+@use "Components/animenamecounter.scss"

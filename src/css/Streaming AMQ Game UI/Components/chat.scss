@@ -1,0 +1,36 @@
+#gameChatContainer {
+	height: 230px;
+	position: absolute;
+	left: 870px;
+	top: 140px;
+	width: 410px;
+}
+
+#gcChatMenu {
+	height: 25px;
+	h5 {
+		font-size: 14px;
+		margin: 5px 0;
+		width: 105%;
+	}
+}
+
+#gcMessageContainer {
+	height: calc(100% - 23px);
+	li {
+		padding: 3px 0 3px 3px;
+	}
+	span {
+		font-size: 14px;
+	}
+}
+
+#gcEmojiPickerOuterContainer {
+	display: none;
+}
+.gcInputContainer {
+	height: 35px;
+	> .textAreaContainer {
+		width: calc(100% - 10px);
+	}
+}

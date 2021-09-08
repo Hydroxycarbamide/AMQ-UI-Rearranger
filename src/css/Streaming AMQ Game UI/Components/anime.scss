@@ -1,0 +1,15 @@
+#qpAnimeContainer {
+	margin-bottom: 80px;
+	> div:first-child {
+		padding: 0;
+		width: 230px;
+	}
+}
+
+#qpVideoContainerInner {
+	display: none;
+}
+
+#qpHiderText {
+	display: none;
+}

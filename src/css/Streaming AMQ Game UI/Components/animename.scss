@@ -1,0 +1,70 @@
+//@extend-elements
+//original selectors
+//#qpAnimeNameContainer, #qpAnimeNameHider
+%extend_1 {
+	width: 625px;
+	height: 119px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#qpAnimeNameContainer {
+	margin-left: 0;
+	@extend %extend_1;
+	.row {
+		margin: 1.5px 0;
+		line-height: 16px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	h5 {
+		display: inline-block;
+		text-align: right;
+		font-size: 16px;
+		margin: 0;
+	}
+	p {
+		display: inline-block;
+		text-align: left;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		margin-bottom: 0;
+		vertical-align: bottom;
+		font-size: 14px;
+	}
+}
+#qpAnimeNameHider {
+	margin-left: 0;
+	top: 0;
+	padding-top: 20px;
+	@extend %extend_1;
+}
+#qpAnimeName {
+	text-align: left;
+	position: static;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: none;
+	padding-left: 10px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: 22px !important;
+}
+#qpCounter {
+	display: none;
+}
+#SecondarySongInfoContainer {
+	margin-top: -3px;
+}
+.SecondaryLeft {
+	width: 97%;
+	display: inline-block;
+	h5 {
+		width: 14%;
+	}
+	p {
+		width: 77%;
+	}
+}

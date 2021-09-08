@@ -1,0 +1,72 @@
+@import "../Ressources/colors.scss";
+
+#playerInfoContainer {
+	background-color: $color_mine_shaft_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 10px 2px black;
+	width: 625px;
+	padding: 4px;
+	margin-top: 5px;
+	.leftColumn {
+		width: 302px;
+		display: inline-block;
+	}
+	.rightColumn {
+		width: 302px;
+		display: inline-block;
+	}
+	.row {
+		margin: 1px 0;
+	}
+	h5 {
+		display: inline-block;
+		width: 230px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		text-align: right;
+		margin: 0;
+		vertical-align: middle;
+	}
+	p {
+		display: inline-block;
+		width: 30px;
+		text-align: left;
+		margin: 0;
+		font-size: 16px;
+		vertical-align: middle;
+	}
+}
+
+#rigExplanationContainer {
+	display: none;
+}
+
+#copySongData {
+	display: block;
+	position: absolute;
+	left: 1400px;
+	top: 70px;
+	color: black;
+}
+
+#getPastebinUrl {
+	display: block;
+	position: absolute;
+	left: 1480px;
+	top: 70px;
+	color: black;
+}
+
+#gameContainer .col-xs-9 {
+	width: 66.6666667%;
+}
+
+.qpsPlayerScore.rightAnswer {
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 0 1px $color_chartreuse_yellow_approx, 0 0 15px $color_chartreuse_yellow_approx, 0 0 30px $color_chartreuse_yellow_approx;
+}
+
+.qpStandingItem div:nth-child(n + 3) {
+	display: none;
+}

@@ -1,0 +1,40 @@
+@import "../Ressources/colors.scss";
+
+#songCounterContainer {
+	background-color: $color_mine_shaft_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 10px 2px black;
+	width: 410px;
+	padding: 4px;
+	position: absolute;
+	left: 870px;
+	top: 0;
+	.leftColumn {
+		width: 165px;
+		display: inline-block;
+		h5 {
+			width: 130px;
+		}
+	}
+	.rightColumn {
+		width: 215px;
+		display: inline-block;
+		h5 {
+			width: 85px;
+		}
+	}
+	.row {
+		margin: 1px 0;
+	}
+	h5 {
+		display: inline-block;
+		width: 60px;
+		text-align: right;
+		margin: 0;
+	}
+	p {
+		display: inline-block;
+		text-align: left;
+		margin: 0;
+	}
+}
