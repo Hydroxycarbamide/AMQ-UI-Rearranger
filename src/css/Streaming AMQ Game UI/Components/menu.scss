@@ -1,7 +1,20 @@
 .topRightBackButton {
-	left: 1300px;
+	left: auto;
+	right: 0;
+	top: 30px;
 }
 
 #qpReturnToLobbyButton {
-	left: 1420px;
+	left: auto;
+	right: 0;
+}
+
+#qpJoinButton {
+	left: auto;
+	right: 110px;
+}
+
+#qpPauseButton {
+	left: auto;
+	right: 190px;
 }
