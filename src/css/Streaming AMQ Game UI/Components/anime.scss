@@ -1,3 +1,5 @@
+@import "../Customize.scss";
+
 #qpAnimeContainer {
 	margin-bottom: 80px;
 	> div:first-child {
@@ -12,4 +14,17 @@
 
 #qpHiderText {
 	display: none;
+}
+
+// Disable duplicated background
+#gameChatPage > div.col-xs-9 {
+	background-image: none;
+}
+
+#gameContainer {
+	background-image: if(
+		$customBackgroundImage,
+		url(../img/backgrounds/normal/bg-x1.jpg),
+		$customBackgroundImageUrl
+	);
 }

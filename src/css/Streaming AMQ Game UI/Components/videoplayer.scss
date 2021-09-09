@@ -1,7 +1,13 @@
+@import "../Customize.scss";
+
 #qpVideosUserHidden {
 	display: none;
 }
 
 #qpVideoContainer {
-	display: none;
+	display: if($enableVideo, block, none);
+}
+
+#qpVideoContainerInner {
+	display: if($enableVideo, block, none);
 }
