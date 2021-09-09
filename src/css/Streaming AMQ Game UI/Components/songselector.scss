@@ -1,9 +1,11 @@
 @import "../Ressources/macros.scss";
 
 #qpAnswerInputContainer {
-	margin-left: 1100px;
 	z-index: 50;
-	position: absolute;
+	position: fixed;
+	width: 30vw;
+	right: 4px;
+	top: 15vh;
 }
 
 .awesomplete > ul.ps {
