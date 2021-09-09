@@ -1,3 +1,6 @@
+@import "../Customize.scss";
+@import "../Ressources/macros.scss";
+
 //@extend-elements
 //original selectors
 //#qpAnimeNameContainer, #qpAnimeNameHider
@@ -7,6 +10,7 @@
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
+	@include blur;
 }
 
 #qpAnimeNameContainer {

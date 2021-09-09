@@ -1,7 +1,14 @@
 @import "../Ressources/colors.scss";
+@import "../Customize.scss";
+@import "../Ressources/macros.scss";
 
 #playerInfoContainer {
-	background-color: $color_mine_shaft_approx;
+	@if $enableBlur {
+		@include blur;
+	} @else {
+		background-color: $color_mine_shaft_approx;
+	}
+	
 	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 	box-shadow: 0 0 10px 2px black;
 	width: 625px;

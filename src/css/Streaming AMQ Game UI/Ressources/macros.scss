@@ -1,0 +1,17 @@
+@import "../Customize.scss";
+
+@mixin blur {
+  @if $enableBlur {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(42, 42, 42, 0.5); 
+  }
+}
+
+@mixin blursecond {
+  @if $enableBlur {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(27, 27, 27, 0.5); 
+  }
+}

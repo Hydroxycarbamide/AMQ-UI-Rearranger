@@ -1,3 +1,5 @@
+@import "../Ressources/macros.scss";
+
 #qpAnswerInputContainer {
 	margin-left: 1100px;
 	z-index: 50;
@@ -6,4 +8,8 @@
 
 .awesomplete > ul.ps {
 	max-height: 650px;
+}
+
+#qpAnswerInputContainer > div.awesomplete > ul {
+	@include blur;
 }

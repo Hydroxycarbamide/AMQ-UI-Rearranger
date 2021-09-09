@@ -1,4 +1,13 @@
+// ╔══════════════════════════╗
+// ║ Options                  ║
+// ╚══════════════════════════╝
+
+// Enable video
 $enableVideo: true;
 
-$customBackgroundImage: true;
-$customBackgroundImageUrl: none;
+// Custom background
+$enableCustomBackgroundImage: true;
+$customBackgroundImageUrl: url(https://github.com/dxnst/nord-wallpapers/blob/master/arctic-landscape.png?raw=true);
+
+// Blur effect
+$enableBlur: true;

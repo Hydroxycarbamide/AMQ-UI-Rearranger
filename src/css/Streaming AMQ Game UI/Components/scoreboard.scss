@@ -1,3 +1,6 @@
+@import "../Customize.scss";
+@import "../Ressources/macros.scss";
+
 .qpScoreBoardNumber {
 	font-size: 16px;
 }
@@ -7,6 +10,7 @@
 }
 
 #qpStandingContainer {
+	@include blur;
 	margin: 0;
 	max-height: 365px !important;
 	h3 {

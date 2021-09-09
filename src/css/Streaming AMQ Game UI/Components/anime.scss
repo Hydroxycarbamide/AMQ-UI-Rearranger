@@ -8,10 +8,6 @@
 	}
 }
 
-#qpVideoContainerInner {
-	display: none;
-}
-
 #qpHiderText {
 	display: none;
 }
@@ -23,8 +19,8 @@
 
 #gameContainer {
 	background-image: if(
-		$customBackgroundImage,
-		url(../img/backgrounds/normal/bg-x1.jpg),
-		$customBackgroundImageUrl
+		$enableCustomBackgroundImage,
+		$customBackgroundImageUrl,
+		url(../img/backgrounds/normal/bg-x1.jpg)
 	);
 }

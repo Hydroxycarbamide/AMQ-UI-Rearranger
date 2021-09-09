@@ -1,4 +1,7 @@
+@import "../Ressources/macros.scss";
+
 #gameChatContainer {
+	@include blur;
 	height: 230px;
 	position: absolute;
 	left: 870px;
@@ -23,6 +26,10 @@
 	span {
 		font-size: 14px;
 	}
+}
+
+.gcList > li:nth-child(2n) {
+	@include blursecond;
 }
 
 #gcEmojiPickerOuterContainer {
