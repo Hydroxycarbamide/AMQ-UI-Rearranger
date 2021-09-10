@@ -1,9 +1,5 @@
 @import "../Customize.scss";
 
-#qpVideosUserHidden {
-	display: none;
-}
-
 #qpVideoContainer {
 	display: if($enableVideo, block, none);
 
@@ -13,11 +9,19 @@
 	height: 240px; // TODO: Make this responsive
 	width: 426px;
 	bottom: 20vh;
-	right: 0;
+	right: 5px;
 	padding-top: initial; // override default AMQ responsive
 	z-index: 11;
 }
 
 #qpVideoContainerInner {
 	display: if($enableVideo, block, none);
+}
+
+#qpVideoContainerHeader {
+	padding: 10px;
+	cursor: move;
+	z-index: 10;
+	background-color: #2196F3;
+	color: #fff;
 }

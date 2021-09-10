@@ -41,28 +41,28 @@ function debugLog(text) {
 }
 
 function ResetSongCounter() {
-	openingCounter = 0;
-	endingCounter = 0;
-	insertCounter = 0;
+    openingCounter = 0;
+    endingCounter = 0;
+    insertCounter = 0;
     aikatsuCounter = 0;
     starmyuCounter = 0;
     priparaCounter = 0;
     scorePercentageCounter = [0,0,0,0,0,0,0,0,0,0];
-	songData = [];
+    songData = [];
     answerInformation = [];
     updateSongCounter(openingCounter, endingCounter, insertCounter, priparaCounter, aikatsuCounter, starmyuCounter, scorePercentageCounter);
 }
 
 //add the Song Counter
 function AddCorrectPlayersBox() {
-	var correctPlayersListing =
-	`<h5><b>Correct</b></h5>
+    var correctPlayersListing =
+    `<h5><b>Correct</b></h5>
      <div id='correctPlayers'></div>`;
 
-	var correctPlayersContainer = document.createElement('div');
-	correctPlayersContainer.id = 'correctPlayersContainer';
-	correctPlayersContainer.innerHTML = correctPlayersListing;
-	document.querySelector("#qpAnimeContainer .col-xs-3").appendChild(correctPlayersContainer);
+    var correctPlayersContainer = document.createElement('div');
+    correctPlayersContainer.id = 'correctPlayersContainer';
+    correctPlayersContainer.innerHTML = correctPlayersListing;
+    document.querySelector("#qpAnimeContainer .col-xs-3").appendChild(correctPlayersContainer);
 }
 
 //check for song type
@@ -73,14 +73,14 @@ function previousSongClear() {
 }
 
 function updateUserCount() {
-	var correctCount = document.querySelectorAll('.qpAvatarAnswerContainer .rightAnswer').length;
-	var totalPlayers = document.querySelectorAll('#qpScoreBoardEntryContainer .qpStandingItem').length
-	var activePlayers = document.querySelectorAll('#qpScoreBoardEntryContainer .qpStandingItem:not(.disabled)').length
+    var correctCount = document.querySelectorAll('.qpAvatarAnswerContainer .rightAnswer').length;
+    var totalPlayers = document.querySelectorAll('#qpScoreBoardEntryContainer .qpStandingItem').length
+    var activePlayers = document.querySelectorAll('#qpScoreBoardEntryContainer .qpStandingItem:not(.disabled)').length
     var totalCorrectAverage = correctCount / totalPlayers;
-	var totalPercentage = Math.round(totalCorrectAverage * 100);
-	var activeCorrectPercentage = Math.round(correctCount * 100 / activePlayers);
+    var totalPercentage = Math.round(totalCorrectAverage * 100);
+    var activeCorrectPercentage = Math.round(correctCount * 100 / activePlayers);
     document.querySelector('#CurrentAvgScore').innerText = totalCorrectAverage.toFixed(2);
-	document.querySelector('#qpStandingCorrectCount').innerText = 'Active: ' + correctCount + ' / ' + activePlayers + ' ' + activeCorrectPercentage + '%';
+    document.querySelector('#qpStandingCorrectCount').innerText = 'Active: ' + correctCount + ' / ' + activePlayers + ' ' + activeCorrectPercentage + '%';
     let percentageTier = Math.floor(activeCorrectPercentage / 10);
 
     //To prevent bugs from 100% and above
@@ -157,28 +157,28 @@ function SongTypeRig() {
 function calculatePlayerRigDetails(){
     var roomName = document.getElementById('mhRoomNameInput').value
     if (roomName !== 'Ranked'){
-		for (var j = 0; j < answerInformation.length; j++) {
-			var playerName = answerInformation[j].playerName;
-			var openings = SongTypeRig();
-			var endings = SongTypeRig();
-			var inserts = SongTypeRig();
-			for (var i = 0; i < songData.length; i++) {
-				var rig = answerInformation[j].onPlayerList[i]
-				var correct = answerInformation[j].rightAnswer[i]
+        for (var j = 0; j < answerInformation.length; j++) {
+            var playerName = answerInformation[j].playerName;
+            var openings = SongTypeRig();
+            var endings = SongTypeRig();
+            var inserts = SongTypeRig();
+            for (var i = 0; i < songData.length; i++) {
+                var rig = answerInformation[j].onPlayerList[i]
+                var correct = answerInformation[j].rightAnswer[i]
 
-				if (songData[i].type.includes("Opening")) {
-					updateRigData(openings, rig, correct)
-				}
-				else if (songData[i].type.includes("Ending")) {
-					updateRigData(endings, rig, correct)
-				}
-				else if (songData[i].type.includes("Insert")) {
-					updateRigData(inserts, rig, correct)
-				}
-			}
-			updateRigTable(playerName, openings, endings, inserts);
-		}
-	}
+                if (songData[i].type.includes("Opening")) {
+                    updateRigData(openings, rig, correct)
+                }
+                else if (songData[i].type.includes("Ending")) {
+                    updateRigData(endings, rig, correct)
+                }
+                else if (songData[i].type.includes("Insert")) {
+                    updateRigData(inserts, rig, correct)
+                }
+            }
+            updateRigTable(playerName, openings, endings, inserts);
+        }
+    }
 }
 
 function createRigTable(){
@@ -187,67 +187,67 @@ function createRigTable(){
         return;
     }
 
-	if (!document.getElementById('rigTrackingHeader')) {
-		var standingsContainer = document.getElementById('qpStandingContainer').children[0];
+    if (!document.getElementById('rigTrackingHeader')) {
+        var standingsContainer = document.getElementById('qpStandingContainer').children[0];
 
-		var rigHeaders = ['Total', 'Openings', 'Endings', 'Inserts'];
-		for (var i = 0; i < 4; i++) {
-			var rigHeader = document.createElement('div');
-			rigHeader.innerText = rigHeaders[i];
-			standingsContainer.append(rigHeader);
-		}
+        var rigHeaders = ['Total', 'Openings', 'Endings', 'Inserts'];
+        for (var i = 0; i < 4; i++) {
+            var rigHeader = document.createElement('div');
+            rigHeader.innerText = rigHeaders[i];
+            standingsContainer.append(rigHeader);
+        }
 
-		var headerRow = document.createElement('div');
-		var fillerDiv = document.createElement('div');
-		headerRow.append(fillerDiv);
-		headerRow.id = "rigTrackingHeader"
+        var headerRow = document.createElement('div');
+        var fillerDiv = document.createElement('div');
+        headerRow.append(fillerDiv);
+        headerRow.id = "rigTrackingHeader"
 
-		var rigTitles = ['R', 'RC', 'NC', 'NW'];
-		for (i = 0; i < 4; i++) {
-			for (var j = 0; j < 4; j++) {
-				var rigTitle = document.createElement('div');
-				rigTitle.innerText = rigTitles[j];
-				headerRow.append(rigTitle);
-			}
-		}
+        var rigTitles = ['R', 'RC', 'NC', 'NW'];
+        for (i = 0; i < 4; i++) {
+            for (var j = 0; j < 4; j++) {
+                var rigTitle = document.createElement('div');
+                rigTitle.innerText = rigTitles[j];
+                headerRow.append(rigTitle);
+            }
+        }
 
         standingsContainer.append(headerRow);
-	}
+    }
 
-	if (!document.getElementById('rigExplanationContainer')) {
-		var centerContainer = document.getElementById('qpAnimeCenterContainer');
+    if (!document.getElementById('rigExplanationContainer')) {
+        var centerContainer = document.getElementById('qpAnimeCenterContainer');
         var rigExplanation = `
-			<div class="row">
-				<h5>R</h5>
-				<p>Rig</p>
-			</div>
-			<div class="row">
-				<h5>RC</h5>
-				<p>Rig Correct</p>
-			</div>
-			<div class="row">
-				<h5>NC</h5>
-				<p>Nonrig Correct</p>
-			</div>
-			<div class="row">
-				<h5>NW</h5>
-				<p>Nonrig Wrong</p>
-			</div>`;
+            <div class="row">
+                <h5>R</h5>
+                <p>Rig</p>
+            </div>
+            <div class="row">
+                <h5>RC</h5>
+                <p>Rig Correct</p>
+            </div>
+            <div class="row">
+                <h5>NC</h5>
+                <p>Nonrig Correct</p>
+            </div>
+            <div class="row">
+                <h5>NW</h5>
+                <p>Nonrig Wrong</p>
+            </div>`;
 
         var rigExplanationContainer = document.createElement('div');
-	    rigExplanationContainer.id = 'rigExplanationContainer';
-	    rigExplanationContainer.innerHTML = rigExplanation;
+        rigExplanationContainer.id = 'rigExplanationContainer';
+        rigExplanationContainer.innerHTML = rigExplanation;
         centerContainer.append(rigExplanationContainer);
-	}
+    }
 
-	var players = document.querySelectorAll('.qpStandingItem');
-	for (j = 0; j < players.length; j++) {
-		//Add the 4*4 fields needed for the rig table
-		for (i = 0; i < 16; i++) {
-			var rig = document.createElement('div');
-			rig.innerText = '0';
-			players[j].append(rig);
-		}
+    var players = document.querySelectorAll('.qpStandingItem');
+    for (j = 0; j < players.length; j++) {
+        //Add the 4*4 fields needed for the rig table
+        for (i = 0; i < 16; i++) {
+            var rig = document.createElement('div');
+            rig.innerText = '0';
+            players[j].append(rig);
+        }
     }
 }
 
@@ -465,14 +465,14 @@ function EndRoundStuff() {
 const SongCounterCallback = function(mutationsList, observer) {
     for(let mutation of mutationsList) {
         if (mutation.type === 'attributes') {
-			if (document.querySelector('#qpAnimeNameHider').classList.contains('hide'))
-			{
+            if (document.querySelector('#qpAnimeNameHider').classList.contains('hide'))
+            {
                 debugLog("Song Counter started");
                 GetAnswerInformation();
                 updateUserCount();
-				updateSongCounter(openingCounter, endingCounter, insertCounter, priparaCounter, aikatsuCounter, starmyuCounter, scorePercentageCounter);
+                updateSongCounter(openingCounter, endingCounter, insertCounter, priparaCounter, aikatsuCounter, starmyuCounter, scorePercentageCounter);
                 EndRoundStuff();
-			}
+            }
         }
     }
 };
@@ -487,9 +487,9 @@ function updateSongData(result) {
     var currentSongData = {
         animeEng: result.songInfo.animeNames.english,
         animeRomaji: result.songInfo.animeNames.romaji,
-		songName: result.songInfo.songName,
-		artist: result.songInfo.artist,
-		type: convertSongTypeToText(result.songInfo.type, result.songInfo.typeNumber),
+        songName: result.songInfo.songName,
+        artist: result.songInfo.artist,
+        type: convertSongTypeToText(result.songInfo.type, result.songInfo.typeNumber),
         correctCount: result.players.filter((player) => player.correct).length,
         startTime: quizVideoController.moePlayers[quizVideoController.currentMoePlayerId].startPoint, //quizVideoController seems to be a global variable that AMQ populateds to
         songDuration: quizVideoController.moePlayers[quizVideoController.currentMoePlayerId].$player.find("video")[0].duration,
@@ -497,8 +497,8 @@ function updateSongData(result) {
         activePlayerCount: activePlayers,
         LinkVideo: videoLink,
         LinkMp3: songLink
-	}
-	songData.push(currentSongData);
+    }
+    songData.push(currentSongData);
 
     //To avoid having songdata being lost because of various incidents, print it in the console after each guess
     var totalPlayers = result.players.length;
@@ -525,20 +525,20 @@ function UploadSongData() {
     var formattedRankedDate = shouldBeSafeTimeForRankedDate.toISOString().split('T')[0];
     var fileName = rankedLocation + " Ranked Song List: " + encodeURIComponent(formattedRankedDate);
     GM_xmlhttpRequest({
-		method: "POST",
-		url: "https://pastebin.com/api/api_post.php",
-		headers: {
-			"Content-Type": "application/x-www-form-urlencoded"
-		},
-		data: "api_dev_key=" + devKey +
-			"&api_user_key=" + userKey +
-			"&api_option=paste" +
-			"&api_paste_private=0" +
-			"&api_paste_name=" + fileName +
-			"&api_paste_expire_date=N" +
-			"&api_paste_format=json" +
-			"&api_paste_code=" + encodeURIComponent(JSON.stringify(songData, null, 2)),
-		onload:     function (response) {
+        method: "POST",
+        url: "https://pastebin.com/api/api_post.php",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        data: "api_dev_key=" + devKey +
+            "&api_user_key=" + userKey +
+            "&api_option=paste" +
+            "&api_paste_private=0" +
+            "&api_paste_name=" + fileName +
+            "&api_paste_expire_date=N" +
+            "&api_paste_format=json" +
+            "&api_paste_code=" + encodeURIComponent(JSON.stringify(songData, null, 2)),
+        onload:     function (response) {
             pastebinUrl = response.response;
 
             //Save the pastebin to gdocs
@@ -572,8 +572,8 @@ function UploadSongData() {
 
 function AddSongDataHolder() {
     var songDataHolder = document.createElement('textarea');
-	songDataHolder.id = 'songDataHolder';
-	document.querySelector("#gameChatPage").appendChild(songDataHolder);
+    songDataHolder.id = 'songDataHolder';
+    document.querySelector("#gameChatPage").appendChild(songDataHolder);
     var songDataCopyButton = document.createElement('button');
     songDataCopyButton.id = 'copySongData'
     songDataCopyButton.innerHTML = 'Copy';
@@ -604,18 +604,18 @@ function secondSongCounterCallback(result) {
 };
 
 function MirrorTimerText() {
-	var timerText = document.querySelector('#qpHiderText').innerText;
+    var timerText = document.querySelector('#qpHiderText').innerText;
     document.querySelector('#qpAnimeNameHider').innerText = timerText
 }
 
 // Mutation Observer for countdown timer dropping
 const CountodwnChangeCallback = function(mutationsList, observer) {
-	MirrorTimerText();
+    MirrorTimerText();
 };
 
 // Things to run at the start of the game
 function StartGameCallback() {
-	// updateSongCounterLabels();
+    // updateSongCounterLabels();
     ResetSongCounter();
     setTimeout(function(){
         createRigTable();
@@ -627,6 +627,9 @@ function StartGameCallback() {
         quiz.scoreboard.setActiveGroup("1")
         quiz.avatarContainer.currentGroup = 1
     }, 30000);
+    setTimeout(function(){
+        createDragableDiv();
+    })
 };
 
 function SetupMirrorTimer() {
@@ -691,3 +694,56 @@ new Listener('Join Game', function () {
 new Listener('Spectate Game', function () {
     StartAmqScript();
 }).bindListener();
+
+
+function createDragableDiv() {
+    const videoContainer = document.getElementById("qpVideoContainer");
+    const dragableElement = document.createElement("div");
+    dragableElement.id = 'qpVideoContainerHeader';
+    videoContainer.insertBefore(dragableElement, videoContainer.firstChild);
+    dragElement(videoContainer);
+}
+
+//Make the DIV element draggagle:
+
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
