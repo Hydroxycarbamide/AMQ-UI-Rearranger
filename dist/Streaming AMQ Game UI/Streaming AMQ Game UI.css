@@ -1,0 +1,456 @@
+#qpAnimeContainer {
+  margin-bottom: 80px;
+}
+#qpAnimeContainer > div:first-child {
+  padding: 0;
+  width: 230px;
+}
+
+#qpHiderText {
+  display: none;
+}
+
+#gameChatPage > div.col-xs-9 {
+  background-image: none;
+}
+
+#gameContainer {
+  background-image: url(https://images8.alphacoders.com/111/1115544.png);
+}
+
+#correctPlayersContainer {
+  background-color: #424242;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(42, 42, 42, 0.5);
+  box-shadow: 0 0 10px 2px black;
+  max-width: 215px;
+  padding: 4px;
+  margin-top: 4px;
+  text-align: left;
+  height: 90px;
+  overflow: hidden;
+}
+#correctPlayersContainer h5 {
+  margin: 0;
+}
+
+#correctPlayers {
+  overflow: hidden;
+}
+
+.qpScoreBoardNumber {
+  font-size: 16px;
+}
+
+.qpScoreBoardEntry {
+  line-height: 20px;
+}
+
+#qpStandingContainer {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(42, 42, 42, 0.5);
+  margin: 0;
+  max-height: 365px !important;
+}
+#qpStandingContainer h3 {
+  text-align: left;
+  margin: 22px 0 5px 5px;
+}
+#qpStandingContainer > div:nth-child(1) > div:nth-child(n+2):nth-child(-n+6) {
+  display: none;
+}
+
+#qpStandingItemContainer {
+  max-height: 330px !important;
+}
+
+#qpScoreBoardEntryContainer {
+  height: 280px !important;
+  transform: scale(0.71);
+  width: 150%;
+  transform-origin: left top;
+}
+#qpScoreBoardEntryContainer .qpScoreBoardNumber {
+  font-size: 24px;
+}
+#qpScoreBoardEntryContainer .qpScoreBoardEntry {
+  line-height: 33px;
+}
+#qpScoreBoardEntryContainer .qpsPlayerScore {
+  font-size: 21px;
+}
+#qpScoreBoardEntryContainer .qpsPlayerName {
+  font-size: 21px;
+}
+
+#qpStandingCorrectCount {
+  text-shadow: none;
+  font-size: 17px;
+  text-align: right;
+}
+
+#rigTrackingHeader {
+  display: none;
+}
+
+#qpAnimeNameHider, #qpAnimeNameContainer {
+  width: 625px;
+  height: 119px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(42, 42, 42, 0.5);
+}
+
+#qpAnimeNameContainer {
+  margin-left: 0;
+}
+#qpAnimeNameContainer .row {
+  margin: 1.5px 0;
+  line-height: 16px;
+}
+#qpAnimeNameContainer .row:first-child {
+  margin-top: 0;
+}
+#qpAnimeNameContainer h5 {
+  display: inline-block;
+  text-align: right;
+  font-size: 16px;
+  margin: 0;
+}
+#qpAnimeNameContainer p {
+  display: inline-block;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 0;
+  vertical-align: bottom;
+  font-size: 14px;
+}
+
+#qpAnimeNameHider {
+  margin-left: 0;
+  top: 0;
+  padding-top: 20px;
+}
+
+#qpAnimeName {
+  text-align: left;
+  position: static;
+  transform: none;
+  padding-left: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 22px !important;
+}
+
+#qpCounter {
+  display: none;
+}
+
+#SecondarySongInfoContainer {
+  margin-top: -3px;
+}
+
+.SecondaryLeft {
+  width: 97%;
+  display: inline-block;
+}
+.SecondaryLeft h5 {
+  width: 14%;
+}
+.SecondaryLeft p {
+  width: 77%;
+}
+
+#qpInnerContainer {
+  display: none;
+}
+
+#qpSongVideoLink {
+  display: none;
+}
+
+#qpInfoHider {
+  height: 100%;
+  font-size: 50px;
+}
+
+#qpAnimeCenterContainer {
+  padding-left: 0;
+}
+#qpAnimeCenterContainer + .col-xs-3 .row {
+  margin: 1px 0;
+}
+#qpAnimeCenterContainer + .col-xs-3 .row:first-child {
+  display: none;
+}
+#qpAnimeCenterContainer + .col-xs-3 h5 {
+  display: inline-block;
+  width: 25%;
+  text-align: right;
+}
+#qpAnimeCenterContainer + .col-xs-3 p {
+  display: inline-block;
+  width: 73%;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 0;
+  vertical-align: bottom;
+}
+#qpAnimeCenterContainer + .col-xs-3 > .qpSideContainer.floatingContainer {
+  display: none;
+}
+
+#qpCounterShadowHider {
+  padding-top: 0;
+}
+
+#qpReportFeedbackContainer {
+  display: none;
+}
+
+#qpVideoContainer {
+  display: block;
+  position: fixed;
+  height: 260px;
+  width: 426px;
+  bottom: 20vh;
+  right: 5px;
+  padding-top: initial;
+  z-index: 11;
+  cursor: move;
+}
+
+#qpVideoContainerInner {
+  display: block;
+}
+
+#gameChatContainer {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(42, 42, 42, 0.5);
+  height: 328px;
+  position: fixed;
+  bottom: 42vh;
+  right: 5px;
+  width: 426px;
+}
+
+#gcChatMenu {
+  height: 25px;
+}
+#gcChatMenu h5 {
+  font-size: 14px;
+  margin: 5px 0;
+  width: 105%;
+}
+
+#gcMessageContainer {
+  height: calc(100% - 23px);
+}
+#gcMessageContainer li {
+  padding: 3px 0 3px 3px;
+}
+#gcMessageContainer span {
+  font-size: 14px;
+}
+
+.gcList > li:nth-child(2n) {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(27, 27, 27, 0.5);
+}
+
+#gcEmojiPickerOuterContainer > i {
+  color: #d9d9d9;
+}
+
+.gcInputContainer {
+  height: 35px;
+}
+.gcInputContainer > .textAreaContainer {
+  width: calc(100% - 10px);
+}
+
+#qpAvatarRow {
+  max-height: 200px;
+}
+
+#qpAnswerInputContainer {
+  z-index: 50;
+  position: fixed;
+  width: 426px;
+  right: 4px;
+  top: 15vh;
+}
+
+.awesomplete > ul.ps {
+  max-height: 650px;
+}
+
+#qpAnswerInputContainer > div.awesomplete > ul {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(42, 42, 42, 0.5);
+}
+
+#qpOptionContainer {
+  height: 28px;
+  position: fixed;
+  right: 0;
+}
+#qpOptionContainer .qpMenuItem {
+  margin-top: 2px;
+}
+
+#qpQualityList {
+  box-shadow: 0 0;
+  margin-bottom: 5px;
+}
+
+#qpVolume {
+  margin-top: 2px;
+}
+
+.topRightBackButton {
+  left: auto;
+  right: 0;
+  top: 30px;
+  position: fixed;
+}
+
+#qpReturnToLobbyButton {
+  left: auto;
+  right: 110px;
+}
+
+#qpJoinButton {
+  left: auto;
+  right: 110px;
+}
+
+#qpPauseButton {
+  left: auto;
+  right: 165px;
+}
+
+#songCounterContainer {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(42, 42, 42, 0.5);
+  box-shadow: 0 0 10px 2px black;
+  width: 410px;
+  padding: 4px;
+  position: absolute;
+  left: 870px;
+  top: 0;
+}
+#songCounterContainer .leftColumn {
+  width: 165px;
+  display: inline-block;
+}
+#songCounterContainer .leftColumn h5 {
+  width: 130px;
+}
+#songCounterContainer .rightColumn {
+  width: 215px;
+  display: inline-block;
+}
+#songCounterContainer .rightColumn h5 {
+  width: 85px;
+}
+#songCounterContainer .row {
+  margin: 1px 0;
+}
+#songCounterContainer h5 {
+  display: inline-block;
+  width: 60px;
+  text-align: right;
+  margin: 0;
+}
+#songCounterContainer p {
+  display: inline-block;
+  text-align: left;
+  margin: 0;
+}
+
+#playerInfoContainer {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(42, 42, 42, 0.5);
+  box-shadow: 0 0 10px 2px black;
+  width: 625px;
+  padding: 4px;
+  margin-top: 5px;
+}
+#playerInfoContainer .leftColumn {
+  width: 302px;
+  display: inline-block;
+}
+#playerInfoContainer .rightColumn {
+  width: 302px;
+  display: inline-block;
+}
+#playerInfoContainer .row {
+  margin: 1px 0;
+}
+#playerInfoContainer h5 {
+  display: inline-block;
+  width: 230px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: right;
+  margin: 0;
+  vertical-align: middle;
+}
+#playerInfoContainer p {
+  display: inline-block;
+  width: 30px;
+  text-align: left;
+  margin: 0;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+#rigExplanationContainer {
+  display: none;
+}
+
+#copySongData {
+  display: block;
+  position: absolute;
+  left: 1400px;
+  top: 70px;
+  color: black;
+}
+
+#getPastebinUrl {
+  display: block;
+  position: absolute;
+  left: 1480px;
+  top: 70px;
+  color: black;
+}
+
+#gameContainer .col-xs-9 {
+  width: 66.6666667%;
+}
+
+.qpsPlayerScore.rightAnswer {
+  text-shadow: 0 0 1px #d6ff00, 0 0 15px #d6ff00, 0 0 30px #d6ff00;
+}
+
+.qpStandingItem div:nth-child(n+3) {
+  display: none;
+}
+
+/*# sourceMappingURL=Streaming%20AMQ%20Game%20UI.css.map */
