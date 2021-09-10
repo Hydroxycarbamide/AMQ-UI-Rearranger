@@ -6,6 +6,15 @@
 
 #qpVideoContainer {
 	display: if($enableVideo, block, none);
+
+	// TODO: Make it an option
+	// TODO: Make it appears only when answer is found (also add animation slide in)
+	position: fixed;
+	height: 240px; // TODO: Make this responsive
+	width: 426px;
+	bottom: 20vh;
+	right: 0;
+	padding-top: initial; // override default AMQ responsive
 }
 
 #qpVideoContainerInner {
