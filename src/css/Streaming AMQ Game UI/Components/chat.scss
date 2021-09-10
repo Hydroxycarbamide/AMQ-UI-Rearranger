@@ -32,7 +32,16 @@
 	@include blursecond;
 }
 
-#gcEmojiPickerOuterContainer > i {
+#gcEmojiPickerOuterContainer {
+	right: 20px;
+}
+
+
+#gcEmojiPickerContainer {
+	right: -175px;
+}
+
+#gcEmojiPickerButton > i {
 	color: #d9d9d9;
 }
 
