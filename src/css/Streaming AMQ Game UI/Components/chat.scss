@@ -2,11 +2,11 @@
 
 #gameChatContainer {
 	@include blur;
-	height: 230px;
-	position: absolute;
-	left: 870px;
-	top: 140px;
-	width: 410px;
+	height: 328px;
+	position: fixed;
+	bottom: 42vh;
+  right: 5px;
+	width: 426px;
 }
 
 #gcChatMenu {
@@ -32,9 +32,10 @@
 	@include blursecond;
 }
 
-#gcEmojiPickerOuterContainer {
-	display: none;
+#gcEmojiPickerOuterContainer > i {
+	color: #d9d9d9;
 }
+
 .gcInputContainer {
 	height: 35px;
 	> .textAreaContainer {
