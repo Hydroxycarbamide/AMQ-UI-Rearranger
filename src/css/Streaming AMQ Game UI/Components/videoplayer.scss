@@ -6,22 +6,16 @@
 	// TODO: Make it an option
 	// TODO: Make it appears only when answer is found (also add animation slide in)
 	position: fixed;
-	height: 240px; // TODO: Make this responsive
+	height: 260px; // TODO: Make this responsive
 	width: 426px;
 	bottom: 20vh;
 	right: 5px;
 	padding-top: initial; // override default AMQ responsive
 	z-index: 11;
+	cursor: move;
 }
 
 #qpVideoContainerInner {
 	display: if($enableVideo, block, none);
-}
-
-#qpVideoContainerHeader {
-	padding: 10px;
-	cursor: move;
-	z-index: 10;
-	background-color: #2196F3;
-	color: #fff;
+	position: relative;
 }
