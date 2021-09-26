@@ -295,7 +295,7 @@
 }
 
 #gcEmojiPickerContainer {
-  right: -175px;
+  left: -175px;
 }
 
 #gcEmojiPickerButton > i {
@@ -481,5 +481,3 @@
 .qpStandingItem div:nth-child(n+3) {
   display: none;
 }
-
-/*# sourceMappingURL=Streaming%20AMQ%20Game%20UI.css.map */
